@@ -164,7 +164,7 @@ setup_epel_gpgkey > /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 sed -i 's/requiretty/!requiretty/g' /etc/sudoers
 
-yum install epel-release -y && yum clean all
+yum update -y
 yum install wget git net-tools bind-utils iptables-services bridge-utils bash-completion yum-utils ansible docker -y
 rm -rf /var/cache/yum
 
