@@ -154,6 +154,7 @@ EOF
 }
 
 #Change yum repo
+rpm -i http://mirror.centos.org/centos/7.4.1708/os/x86_64/Packages/centos-release-7-4.1708.el7.centos.x86_64.rpm
 rm -f /etc/yum.repos.d/*
 sed -i 's/enabled=1/enabled=0/' /etc/yum/pluginconf.d/fastestmirror.conf
 rm -rf /var/cache/yum
