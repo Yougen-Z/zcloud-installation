@@ -165,8 +165,8 @@ setup_epel_gpgkey > /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
 
 sed -i 's/requiretty/!requiretty/g' /etc/sudoers
 
-#yum update -y
-yum install wget git net-tools bind-utils bridge-utils bash-completion yum-utils ansible docker -y
+yum update -y --exclude=WALinuxAgent
+yum install -y wget git net-tools bind-utils bridge-utils bash-completion yum-utils ansible docker
 rm -rf /var/cache/yum
 
 echo "Configure docker device mapper"
